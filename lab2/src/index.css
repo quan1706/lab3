@@ -1,0 +1,247 @@
+/* Custom CSS for Pizza House */
+
+:root {
+  --bg-dark: #363636;
+  --navbar-bg: #212529;
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --btn-buy: #343a40;
+  --btn-buy-hover: #1a1e21;
+  --btn-submit: #ffc107;
+  --btn-submit-hover: #e0a800;
+  --badge-bg: #f8f9fa;
+  --badge-yellow: #ffff00;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+.navbar-brand-custom {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link-custom {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover, 
+.nav-link-custom.active {
+  color: var(--text-light) !important;
+}
+
+.search-btn-custom {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+}
+
+.search-btn-custom:hover {
+  background-color: #bd2130 !important;
+  border-color: #bd2130 !important;
+}
+
+/* Hero Carousel */
+.carousel-item-custom {
+  height: 500px;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.carousel-caption-custom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-caption-custom h2 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+.carousel-caption-custom p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+}
+
+/* Sections */
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* Pizza Cards */
+.pizza-card-container {
+  position: relative;
+}
+
+.pizza-card {
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+  border: none !important;
+  border-radius: 4px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pizza-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.pizza-card-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.pizza-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pizza-card:hover .pizza-card-img {
+  transform: scale(1.1);
+}
+
+.pizza-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--badge-yellow);
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  z-index: 5;
+  text-transform: uppercase;
+  border-radius: 0px; /* Square badge as in screenshot */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.pizza-card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.pizza-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.pizza-price-original {
+  text-decoration: line-through;
+  color: #999999;
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+.pizza-price-discount {
+  color: #fd7e14; /* orange-red */
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.pizza-price-regular {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.btn-buy-pizza {
+  background-color: var(--btn-buy);
+  color: var(--text-light);
+  border: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.btn-buy-pizza:hover {
+  background-color: var(--btn-buy-hover);
+  color: var(--text-light);
+}
+
+/* Booking Form */
+.booking-form-container {
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.booking-input {
+  background-color: #ffffff !important;
+  color: #495057 !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 4px !important;
+  padding: 12px !important;
+}
+
+.booking-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25) !important;
+  border-color: var(--btn-submit) !important;
+}
+
+.btn-booking-submit {
+  background-color: var(--btn-submit) !important;
+  border-color: var(--btn-submit) !important;
+  color: var(--text-light) !important;
+  font-weight: 600;
+  padding: 10px 24px !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease !important;
+  border-radius: 4px !important;
+}
+
+.btn-booking-submit:hover {
+  background-color: var(--btn-submit-hover) !important;
+  border-color: var(--btn-submit-hover) !important;
+}
+
+/* Footer / Spacer */
+.pizza-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px 0;
+  margin-top: 50px;
+}
